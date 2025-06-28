@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<!-- Project Metadata -->
+		<RootNamespace>AuthApi</RootNamespace>
+		<AssemblyName>AuthApi</AssemblyName>
+		<Authors>Arjun Sharma</Authors>
+		<Company>TheArjunSharma</Company>
+		<Product>Auth API</Product>
+		<Description>REST API for user authentication using MongoDB and JWT in C#.</Description>
+		<PackageTags>authentication;rest-api;jwt;mongodb;aspnet-core;dotnet8</PackageTags>
+		<RepositoryUrl>https://github.com/TheArjunSharma-ai/MongoAuthApi</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/TheArjunSharma-ai/MongoAuthApi</PackageProjectUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+		<PackageReference Include="MongoDB.Bson" Version="3.4.0" />
+		<PackageReference Include="MongoDB.Driver" Version="3.4.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1" />
+	</ItemGroup>
+
+</Project>
