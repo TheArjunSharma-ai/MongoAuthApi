@@ -96,9 +96,7 @@ public class AuthController : ControllerBase
     /// <returns>A signed JWT token.</returns>
     private string GenerateJwtToken(User user)
     {
-        var claims = new[]{
-    new Claim(ClaimTypes.Name, user.Username)
-};
+        var claims = new[]{new Claim(ClaimTypes.Name, user.Username)};
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"]));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);

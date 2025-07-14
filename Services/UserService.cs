@@ -46,7 +46,7 @@ public class UserService
     /// <param name="username">The username of the user.</param>
     /// <returns>The user object if found; otherwise, null.</returns>
     public async Task<User> GetByPhone(string username) =>
-        await _users.Find(u => u.PhoneNo == username).FirstOrDefaultAsync();
+        await _users.Find(u => u.PhoneNo != null && u.PhoneNo.Number == username).FirstOrDefaultAsync();
 
     /// <summary>
     /// Creates a new user with a hashed password.

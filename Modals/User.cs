@@ -3,18 +3,23 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace AuthApi.Modals;
 
-public class User
+public class User : Base
 {
-    [BsonId]
-    public ObjectId Id { get; set; }
-
     [BsonElement("username")]
     public string Username { get; set; }
 
     [BsonElement("passwordHash")]
     public string PasswordHash { get; set; }
+
+    [BsonElement("firstName")]
     public string FirstName { get; set; }
+
+    [BsonElement("lastName")]
     public string LastName { get; set; }
+
+    [BsonElement("email")]
     public string Email { get; set; }
-    public string PhoneNo { get; set; }
+
+    [BsonElement("phoneNo")]
+    public PhoneNumber PhoneNo { get; set; }
 }
